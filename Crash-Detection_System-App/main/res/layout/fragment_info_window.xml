@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    tools:context=".InfoWindowFragment">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/toplayout"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:src="@drawable/alert_marker"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/infoWindowTitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:text="Alert details not found"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!--LinearLayout
+            android:id="@+id/toplayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:src="@drawable/alert_marker"
+                android:gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/infoWindowTitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="alert info not avaliable"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="#000000"/>
+
+        </LinearLayout-->
+
+        <LinearLayout
+            android:id="@+id/noted_btn_layout"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toplayout"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal">
+
+
+            <info.hoang8f.widget.FButton
+                fbutton:fButtonColor="@color/fbutton_color_alizarin"
+                fbutton:shadowEnabled="true"
+                fbutton:shadowHeight="6dp"
+                fbutton:cornerRadius="30dp"
+                android:layout_margin="5dp"
+                android:id="@+id/false_alert_btn"
+                android:layout_width="120dp"
+                android:layout_height="55dp"
+                android:text="False Alert"
+                android:textColor="@android:color/white"/>
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/noted_btn"
+                android:layout_width="120dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:text="Noted!"
+                android:textColor="@android:color/white"
+                fbutton:cornerRadius="30dp"
+                fbutton:fButtonColor="@color/fbutton_color_nephritis"
+                fbutton:shadowEnabled="true"
+                fbutton:shadowHeight="6dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
